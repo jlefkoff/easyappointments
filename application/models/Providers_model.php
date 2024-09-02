@@ -36,13 +36,8 @@ class Providers_model extends EA_Model
         'id' => 'id',
         'firstName' => 'first_name',
         'lastName' => 'last_name',
+        'cid' => 'cid',
         'email' => 'email',
-        'mobile' => 'mobile_number',
-        'phone' => 'phone_number',
-        'address' => 'address',
-        'city' => 'city',
-        'state' => 'state',
-        'zip' => 'zip_code',
         'timezone' => 'timezone',
         'language' => 'language',
         'notes' => 'notes',
@@ -97,7 +92,7 @@ class Providers_model extends EA_Model
             empty($provider['first_name']) ||
             empty($provider['last_name']) ||
             empty($provider['email']) ||
-            empty($provider['phone_number'])
+            empty($provider['cid'])
         ) {
             throw new InvalidArgumentException('Not all required fields are provided: ' . print_r($provider, true));
         }
